@@ -1,0 +1,28 @@
+@import '../../assets/scss/_variables';
+
+header {
+    background-color: $ml-yellow; 
+    height: 50px;
+    width: 100%;
+
+    .search-container {
+        height: 50px;
+        position: relative;
+        vertical-align: middle;
+
+        .logo {
+            background-image: url('../../assets/img/ml-logo.png');
+            display: inline-block;
+            height: 40px;
+            margin-top: 5px;
+            width: 159px;
+        }
+    }
+
+    input[type="text"] {
+        float: right;
+        height: 25px;
+        margin-top: 10px;
+        width: 80%;
+    }
+}
