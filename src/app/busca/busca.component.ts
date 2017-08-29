@@ -15,12 +15,13 @@ export class BuscaComponent implements OnInit {
   constructor(public buscaSrv: BuscaService) { }
 
   ngOnInit() {
-
     this.searchControl.valueChanges
       .debounceTime(500)
       .subscribe(valor => {
-        this.buscaSrv.loading = true;
-        this.buscaProduto(valor);
+        if (valor.length > 0) {
+          this.buscaSrv.loading = true;
+          this.buscaProduto(valor);
+        }
       });
 
   }

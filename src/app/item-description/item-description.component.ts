@@ -15,15 +15,15 @@ export class ItemDescriptionComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe((params: Params) => {
-      let id = params['id'];
+      const id = params['id'];
 
       this.buscaSrv.searchSingleProduct(id).subscribe((res: Response) => {
         this.item = res;
-      })
+      });
 
       this.buscaSrv.searchSingleProductDesription(id).subscribe((res: Response) => {
         this.itemDescription = res;
-      })
+      });
     });
   }
 

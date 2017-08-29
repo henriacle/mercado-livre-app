@@ -12,15 +12,14 @@ import { ItemDescriptionComponent } from './item-description/item-description.co
 import { BuscaService } from './shared/busca.service';
 
 const appRoutes: Routes = [
-  { path: '', component: ResultadoBuscaComponent },
+  { path: 'items', component: ResultadoBuscaComponent },
   { path: 'descricao/:id', component: ItemDescriptionComponent },
   { path: '',
-    redirectTo: '/',
+    redirectTo: '/items',
     pathMatch: 'full'
-  }
+  },
+  { path: '**', component: ResultadoBuscaComponent }
 ];
-
-//{ path: '**', component: PageNotFoundComponent }
 
 @NgModule({
   declarations: [
