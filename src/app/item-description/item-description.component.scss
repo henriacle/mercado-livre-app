@@ -1,0 +1,47 @@
+@import '../../assets/scss/_variables';
+
+.product-image {
+    display: inline-block;
+    width: 550px;
+    height: 550px;
+
+    img {
+        width: 550px;
+        height: 550px;
+    }
+}
+
+.product-description {
+    float: right;
+    display: inline-block;
+    vertical-align: top;
+    padding: 50px;
+
+    .description {
+        font-size: 21px;
+        font-weight: bold;
+    }
+
+    .price {
+        font-size: 48px;
+    }
+
+    button {
+        border: none;
+        height: 40px;
+        width: 100%;
+        text-align: center;
+        background-color: #3555FF;
+        color: #fff;
+    }
+}
+
+.busca-item {
+    padding: 20px;
+
+    .descricao {
+        h5 {
+            font-size: 32px;   
+        }
+    }
+}

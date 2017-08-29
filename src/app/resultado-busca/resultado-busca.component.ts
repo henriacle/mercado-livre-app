@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BuscaService } from '../shared/busca.service';
 
 @Component({
   selector: 'ml-resultado-busca',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultadoBuscaComponent implements OnInit {
 
-  constructor() { }
+  constructor(public buscaSrv: BuscaService) { }
 
   ngOnInit() {
+    this.buscaSrv.searchProdutos('teste');
   }
 
 }

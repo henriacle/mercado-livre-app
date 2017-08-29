@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ml-resultado-busca-item',
@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resultado-busca-item.component.scss']
 })
 export class ResultadoBuscaItemComponent implements OnInit {
+  @Input() resultado; 
 
   constructor() { }
 
   ngOnInit() {
+    console.log(this.resultado);
   }
 
 }

@@ -3,5 +3,5 @@
 </div>
 
 <div class="container white">
-  <ml-resultado-busca-item></ml-resultado-busca-item>
+      <ml-resultado-busca-item [resultado]="result" *ngFor="let result of buscaSrv.listaResultados"></ml-resultado-busca-item>      
 </div>
