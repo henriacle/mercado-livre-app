@@ -1,38 +1,43 @@
 @import '../../assets/scss/_variables';
 
 .product-image {
-    display: inline-block;
-    width: 550px;
-    height: 550px;
+  display: inline-block;
+  height: auto;
+  margin: 20px;
+  padding: 20px 0;
+  width: 350px;
 
-    img {
-        width: 550px;
-        height: 550px;
-    }
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .product-description {
     float: right;
-    display: inline-block;
     vertical-align: top;
     padding: 50px;
+    width: 300px;
 
     .description {
         font-size: 21px;
         font-weight: bold;
+        margin-top: 10px;
     }
 
     .price {
         font-size: 48px;
+        margin-top: 20px;
     }
 
     button {
-        border: none;
-        height: 40px;
-        width: 100%;
-        text-align: center;
         background-color: #3555FF;
         color: #fff;
+        border: none;
+        height: 40px;
+        margin: 30px auto;
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -41,7 +46,19 @@
 
     .descricao {
         h5 {
-            font-size: 32px;   
+            font-size: 32px;
+            margin: 30px 0 0 0;
+            width: 100%;
+            text-align: left;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ccc;
         }
     }
+}
+
+.plain-text {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px !important;
+  line-height: 17px;
 }

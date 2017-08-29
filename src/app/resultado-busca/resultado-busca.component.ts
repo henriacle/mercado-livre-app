@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BuscaService } from '../shared/busca.service';
 
 @Component({
@@ -8,10 +9,14 @@ import { BuscaService } from '../shared/busca.service';
 })
 export class ResultadoBuscaComponent implements OnInit {
 
-  constructor(public buscaSrv: BuscaService) { }
+  constructor(public buscaSrv: BuscaService, public router: Router) { }
+
+  goToDescription(idProduto) {
+    this.router.navigate(['/descricao', idProduto]);
+  }
 
   ngOnInit() {
-    this.buscaSrv.searchProdutos('teste');
+
   }
 
 }

@@ -1,4 +1,8 @@
+import { BuscaService } from '../shared/busca.service';
+import { Form, FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import "rxjs/Rx";
+
 
 @Component({
   selector: 'ml-busca',
@@ -6,10 +10,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./busca.component.scss']
 })
 export class BuscaComponent implements OnInit {
+  searchControl = new FormControl();
 
-  constructor() { }
+  constructor(public buscaSrv: BuscaService) { }
 
   ngOnInit() {
+
+    this.searchControl.valueChanges
+      .debounceTime(500)
+      .subscribe(valor => {
+        this.buscaProduto(valor);
+      });
+
   }
 
+  buscaProduto(valor) {
+    this.buscaSrv.searchProdutos(valor);
+  }
 }

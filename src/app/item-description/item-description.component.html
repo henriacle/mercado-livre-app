@@ -1,25 +1,21 @@
-<div class="container">
-  teste
-</div>
-
-<div class="container white">
+<div class="container white" *ngIf="item">
   <div class="busca-item">
 
     <div class="product-image">
-      <img src="https://sc02.alicdn.com/kf/HTB1sMnXHFXXXXbRaXXXq6xXFXXXB/New-Product-Hot-Selling-Amazon-Phone-Case.jpg_350x350.jpg">
+      <img src="{{(item.pictures[0]) ? item.pictures[0].url : ''}}">
     </div>
 
     <div class="product-description">
-      <div class="vendidos">Novo - 234 vendidos</div>
-      <div class="description">Lorem ipsum dolor assit amet</div>
-      <div class="price">$1.980,00</div>
+      <div class="vendidos">{{item.condition}} - {{item?.sold_quantity}} vendidos</div>
+      <div class="description">{{item?.title}}</div>
+      <div class="price">{{item?.price | currency:'ARS':true}}</div>
       <button> Comprar </button>
     </div>
 
     <div class="descricao">
       <h5>Descrição do produto</h5>
-      <p>
-        Lorem ipsum
+      <p class="plain-text">
+        {{itemDescription?.plain_text}}
       </p>
     </div>
 
