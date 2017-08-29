@@ -22,7 +22,6 @@ export class ItemDescriptionComponent implements OnInit {
       })
 
       this.buscaSrv.searchSingleProductDesription(id).subscribe((res: Response) => {
-        console.log(res);
         this.itemDescription = res;
       })
     });

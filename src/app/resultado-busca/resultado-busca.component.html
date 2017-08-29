@@ -1,3 +1,5 @@
-<div class="container white">
+<div class="loading" *ngIf="buscaSrv.loading">Carregando...</div>
+
+<div class="container white" *ngIf="buscaSrv.listaResultados">
       <ml-resultado-busca-item (click)="goToDescription(result.id)" [resultado]="result" *ngFor="let result of buscaSrv.listaResultados.results"></ml-resultado-busca-item>
 </div>

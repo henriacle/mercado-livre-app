@@ -1,3 +1,5 @@
+@import '../../../assets/scss/_variables';
+
 .product-image {
   display: inline-block;
   height: 150px;
@@ -28,7 +30,7 @@
     }
 
     .description {
-        color: #5f5f5f;
+        color: $dark-gray-text;
         font-size: 21px;
         margin-top: 20px;
     }

@@ -6,12 +6,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./resultado-busca-item.component.scss']
 })
 export class ResultadoBuscaItemComponent implements OnInit {
-  @Input() resultado; 
+  @Input() resultado;
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this.resultado);
   }
 
 }

@@ -19,6 +19,7 @@ export class BuscaComponent implements OnInit {
     this.searchControl.valueChanges
       .debounceTime(500)
       .subscribe(valor => {
+        this.buscaSrv.loading = true;
         this.buscaProduto(valor);
       });
 
